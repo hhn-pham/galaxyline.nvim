@@ -14,18 +14,18 @@ local function search(prefix, pattern)
   if line == 0 then
     return ''
   end
-  return fmt('[%s:%d]', prefix, line)
+  return fmt('%s:%d', prefix, line)
 end
 
 local function check_trailing()
-  return search('trailing', [[\s$]])
+  return search('TR', [[\s$]])
 end
 
 local function check_mix_indent()
   local tst = [[(^\t* +\t\s*\S)]]
   local tls = fmt([[(^\t+ {%d,}\S)]], bo.tabstop)
   local pattern = fmt([[\v%s|%s]], tst, tls)
-  return search('mix-indent', pattern)
+  return search('MI', pattern)
 end
 
 local function check_mix_indent_file()
