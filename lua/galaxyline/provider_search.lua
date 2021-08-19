@@ -7,7 +7,7 @@ function M.get_search_results()
   local active = vim.v.hlsearch == 1 and search_count.total > 0
 
   if active then
-    return '/' .. search_term .. ' ' .. search_count.current .. '/' .. search_count.total .. ''
+    return '/' .. search_term .. ' ' .. search_count.current .. '/' .. search_count.total .. ' '
   end
 end
 
