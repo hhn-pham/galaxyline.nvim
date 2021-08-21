@@ -14,7 +14,7 @@ local function search(prefix, pattern)
   if line == 0 then
     return ''
   end
-  return fmt('%s:%d', prefix, line)
+  return fmt('%s:%d ', prefix, line)
 end
 
 local function check_trailing()
@@ -38,7 +38,7 @@ local function check_mix_indent_file()
   if indent_tabs == 0 or indent_spc == 0 then
     return ''
   end
-  return fmt('MI-F:%d,%d', indent_spc, indent_tabs)
+  return fmt('MI-F:%d,%d ', indent_spc, indent_tabs)
 end
 
 local function check_conflict()
