@@ -1,3 +1,4 @@
+-- edited formatting of string
 local fn, vim = vim.fn, vim
 local b, bo = vim.b, vim.bo
 local fmt = string.format
